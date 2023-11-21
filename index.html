@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syncing to your WooCommerce store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- GSAP -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <!-- Sync Container -->
+    <div class="sync_container" id="sync-page">
+      <!-- Oliver Logo -->
+      <div class="sync_logo">
+        <img src="./assets/Oliver-Horizontal.svg" alt="Oliver" />
+      </div>
+      <!-- Sync Content -->
+      <div class="sync_content">
+        <!-- Sync Left Container -->
+        <div class="sync_left-container">
+          <!-- Sync Text -->
+          <div class="sync_text">
+            <p>
+              <span>Syncing</span>
+              to your WooCommerce store
+            </p>
+          </div>
+          <!-- Sync Images -->
+          <div class="sync-card-images">
+            <!-- Sync Image -->
+            <div class="sync_card_img-container">
+              <img src="./assets/syn_woo_commerce_img.png" alt="" />
+            </div>
+
+            <!-- Sync Spinner -->
+            <div class="sync_card_img-container sync_spinner-container">
+              <svg
+                width="217"
+                height="245"
+                viewBox="0 0 217 245"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_2_2)">
+                  <path
+                    d="M147.292 3.11682L152.284 17.4418L157.515 31.1343M157.515 31.1343L124.467 40.915M157.515 31.1343C141.505 17.4418 83.7543 5.97574 40.8704 43.1418"
+                    stroke="#3D4C66"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="sync_spinner-arr-1"
+                  />
+                  <path
+                    d="M69.3897 242.006L64.3981 227.681L59.1672 213.989M59.1672 213.989L92.2146 204.208M59.1672 213.989C75.1772 227.681 132.928 239.147 175.811 201.981"
+                    stroke="#3D4C66"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="sync_spinner-arr-2"
+                  />
+                  <path
+                    d="M207 121C207 175.124 163.124 219 109 219C54.8761 219 11 175.124 11 121C11 66.8761 54.8761 23 109 23C163.124 23 207 66.8761 207 121Z"
+                    stroke="#3D4C66"
+                    stroke-width="6"
+                    class="sync_spinner-circle"
+                  />
+                  <path
+                    d="M59 121L86 153.5L158 90"
+                    stroke="#3D4C66"
+                    stroke-width="8"
+                    stroke-linecap="round"
+                    class="sync_spinner-check"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2_2">
+                    <rect width="217" height="245" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+              <!-- Checkmark svg -->
+              <!-- <svg
+                width="217"
+                height="245"
+                viewBox="0 0 217 245"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M207 121C207 175.124 163.124 219 109 219C54.8761 219 11 175.124 11 121C11 66.8761 54.8761 23 109 23C163.124 23 207 66.8761 207 121Z"
+                  stroke="#3D4C66"
+                  stroke-width="6"
+                />
+                <path
+                  d="M59 121L86 153.5L158 90"
+                  stroke="#3D4C66"
+                  stroke-width="8"
+                  stroke-linecap="round"
+                />
+              </svg> -->
+            </div>
+
+            <!-- Sync small center Image -->
+            <div class="sync_spinner_container">
+              <img
+                src="./assets/sync_spinner-img.png"
+                class="sync_spinner-img"
+                alt=""
+              />
+            </div>
+
+            <!-- Sync Image -->
+            <div class="sync_card_img-container">
+              <img src="./assets/syn_oliver_img.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="sync_right-container">
+          <!-- Sync Card -->
+          <div class="sync_card">
+            <h2>Progress</h2>
+            <!-- Sync Progress -->
+            <svg id="animated" viewbox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" />
+              <path
+                id="progress_2"
+                stroke-linecap="round"
+                stroke-width="3"
+                fill="none"
+                d="M50 10 a 40 40 0 0 1 0 80 a 40 40 0 0 1 0 -80"
+              ></path>
+              <path
+                id="SyncProgressBar"
+                stroke-linecap="round"
+                stroke-width="4"
+                fill="none"
+                d="M50 10 a 40 40 0 0 1 0 80 a 40 40 0 0 1 0 -80"
+              ></path>
+              <text
+                id="TotalProgSync"
+                x="52"
+                y="50"
+                text-anchor="middle"
+                dy="7"
+                font-size="18"
+              >
+                0%
+              </text>
+            </svg>
+
+            <div class="sync_card-content">
+              <div class="sync_card-row-group">
+                <div class="sync_icon-img-container">
+                  <img src="./assets/settings_icon.svg" alt="" />
+                </div>
+                <h4 class="heading">Settings</h4>
+                <p class="quantity" id="progSetting">0</p>
+              </div>
+              <div class="sync_card-row-group">
+                <div class="sync_icon-img-container">
+                  <img src="./assets/products_icon.svg" alt="" />
+                </div>
+                <h4 class="heading">Products</h4>
+                <p class="quantity" id="progProduct">0</p>
+              </div>
+              <div class="sync_card-row-group">
+                <div class="sync_icon-img-container">
+                  <img src="./assets/cusomers_icon.svg" alt="" />
+                </div>
+                <h4 class="heading">Customers</h4>
+                <p class="quantity" id="progCustomer">0</p>
+              </div>
+              <div class="sync_card-row-group">
+                <div class="sync_icon-img-container">
+                  <img src="./assets/orders_icon.svg" alt="" />
+                </div>
+                <h4 class="heading">Orders</h4>
+                <p class="quantity" id="progOrder">0</p>
+              </div>
+            </div>
+            <!-- Button -->
+            <a id="SyncDoneBtn" href="#" class="sync_btn disabled"
+              >Continue without orders</a
+            >
+          </div>
+          <p class="desc_text">
+            You can proceed straight to the register before the sync is
+            complete. Some of your products, customers, and orders may not be
+            available yet.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="./script.js"></script>
+  </body>
+</html>
